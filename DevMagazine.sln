@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitefinityWebApp", "SitefinityWebApp\SitefinityWebApp.csproj", "{3E598CFC-83B2-494A-A97F-32EB24D797C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevMagazine.Web", "SitefinityWebApp\DevMagazine.Web.csproj", "{3E598CFC-83B2-494A-A97F-32EB24D797C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevMagazine.Core", "DevMagazine.Core\DevMagazine.Core.csproj", "{3F55D63D-E9A7-46F6-9447-8AAD1651A606}"
 EndProject
