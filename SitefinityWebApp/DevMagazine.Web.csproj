@@ -749,9 +749,8 @@
     <Content Include="ResourcePackages\Bootstrap\assets\src\js\bootstrap.js" />
     <Content Include="ResourcePackages\Bootstrap\assets\src\js\devMagazine.js" />
     <Content Include="ResourcePackages\Bootstrap\assets\src\js\jquery.fixit.js" />
-    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\container-fluid.html" />
+    <Content Include="ResourcePackages\Bootstrap\client-components\fields\html-field\sf-html-field.html" />
     <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\container.html" />
-    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\empty-placeholder.html" />
     <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-12.html" />
     <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-2+3+2+3+2.html" />
     <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-3+3+3+3.html" />
@@ -760,10 +759,8 @@
     <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-4+4+4.html" />
     <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-4+8.html" />
     <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-6+6.html" />
-    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-7+5.html" />
     <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-8+4.html" />
     <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-9+3.html" />
-    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-container.html" />
     <Content Include="ResourcePackages\Bootstrap\gruntfile.js" />
     <Content Include="ResourcePackages\Bootstrap\MVC\Scripts\SearchBox\Search-box.js" />
     <Content Include="ResourcePackages\Foundation\assets\dist\css\styles.css" />
@@ -988,7 +985,7 @@
     <Folder Include="ResourcePackages\BootstrapCustom\assets\src\sass\sitefinity\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Data\GeoLocation\GeoLiteCity.dat" />
+    <Content Include="App_Data\GeoLocation\GeoLiteCity.dat" />
     <Content Include="Mvc\Views\Issue\List.LatestIssue.cshtml" />
     <Content Include="Mvc\Views\News\Detail.EmptyArticle.cshtml" />
     <Content Include="Mvc\Views\Issue\Detail.Issue.cshtml" />
@@ -1128,7 +1125,6 @@
     <Content Include="ResourcePackages\Bootstrap\MVC\Views\SocialShare\SocialShare.cshtml" />
     <Content Include="ResourcePackages\Bootstrap\MVC\Views\SocialShare\SocialShareIconsWithText.cshtml" />
     <Content Include="ResourcePackages\Bootstrap\package.json" />
-    <Content Include="ResourcePackages\Bootstrap\README.md" />
     <Content Include="ResourcePackages\Foundation\assets\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="ResourcePackages\Foundation\assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="ResourcePackages\Foundation\assets\fonts\glyphicons-halflings-regular.woff" />
@@ -1348,7 +1344,9 @@
     <Content Include="App_Data\Sitefinity\Configuration\CatalogConfig.contentViewControls.ProductTypesBackendDefinitionName.views.ProductTypesBackendMaster.config" />
     <Content Include="App_Data\Sitefinity\Configuration\CommentsModuleConfig.config" />
     <Content Include="App_Data\Sitefinity\Configuration\ContentViewConfig.config" />
-    <Content Include="App_Data\Sitefinity\Configuration\DataConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\DataConfig.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\Sitefinity\Configuration\DigitalExperienceCloudConnectorConfig.config" />
     <Content Include="App_Data\Sitefinity\Configuration\DynamicModulesConfig.config" />
     <Content Include="App_Data\Sitefinity\Configuration\EcommerceConfig.config" />
@@ -1377,6 +1375,26 @@
       <Project>{3f55d63d-e9a7-46f6-9447-8aad1651a606}</Project>
       <Name>DevMagazine.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\AccountActivation\AccountActivation.AccountActivation.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ChangePassword\ChangePassword.ChangePassword.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\DesignerView.Simple.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\DesignerView.Simple.json" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\Detail.DetailPage.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\List.ImageGallery.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\List.OverlayGallery.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\List.SimpleList.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Image\Image.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LoginForm\ForgotPassword.ForgottenPassword.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LoginForm\LoginForm.LoginForm.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LoginForm\ResetPassword.ResetPassword.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LoginStatus\LoginStatus.LoginButton.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LoginStatus\LoginStatus.LoginName.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Profile\Edit.ProfileEdit.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Profile\Read.ProfilePreview.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Registration\Registration.RegistrationForm.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="OpenAccessNuget.targets" />

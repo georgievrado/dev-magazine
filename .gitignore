@@ -184,7 +184,6 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
-*.lic
 *.jmconfig
 .nuget/NuGet.exe
 OauthExternalAuthentication/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
