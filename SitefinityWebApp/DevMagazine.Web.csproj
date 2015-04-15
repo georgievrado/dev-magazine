@@ -1405,16 +1405,16 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Data\Sitefinity\Configuration\DataConfig.UAT.config">
+    <Content Include="App_Data\Sitefinity\Configuration\DataConfig.UAT.config">
       <DependentUpon>DataConfig.config</DependentUpon>
       <IsTransformFile>True</IsTransformFile>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="App_Data\Sitefinity\Configuration\DataConfig.Production.config">
+    </Content>
+    <Content Include="App_Data\Sitefinity\Configuration\DataConfig.Production.config">
       <DependentUpon>DataConfig.config</DependentUpon>
       <IsTransformFile>True</IsTransformFile>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
     <Content Include="Properties\SlowCheetah\SlowCheetah.Transforms.targets" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
