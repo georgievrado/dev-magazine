@@ -1405,11 +1405,11 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Sitefinity\Configuration\DataConfig.UAT.config">
+    <None Include="App_Data\Sitefinity\Configuration\DataConfig.UAT.config">
       <DependentUpon>DataConfig.config</DependentUpon>
       <IsTransformFile>True</IsTransformFile>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </None>
     <None Include="App_Data\Sitefinity\Configuration\DataConfig.Production.config">
       <DependentUpon>DataConfig.config</DependentUpon>
       <IsTransformFile>True</IsTransformFile>
