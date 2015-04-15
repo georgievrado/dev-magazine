@@ -1405,13 +1405,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Data\Sitefinity\Configuration\DataConfig.UAT.config">
+    <Content Include="App_Data\Sitefinity\Configuration\DataConfig.UAT.config">
       <DependentUpon>DataConfig.config</DependentUpon>
       <IsTransformFile>True</IsTransformFile>
-    </None>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="App_Data\Sitefinity\Configuration\DataConfig.Production.config">
       <DependentUpon>DataConfig.config</DependentUpon>
       <IsTransformFile>True</IsTransformFile>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <Content Include="Properties\SlowCheetah\SlowCheetah.Transforms.targets" />
   </ItemGroup>
