@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DevMagazine.Sample.IntegrationTests
 {
     [TestFixture]
-    [Description("Dummy integration tests"]
+    [Description("Dummy integration tests")]
     public class DummyTests
     {
         [Test]
