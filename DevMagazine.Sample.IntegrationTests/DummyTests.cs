@@ -24,18 +24,18 @@ namespace DevMagazine.Sample.IntegrationTests
             Assert.AreEqual<int>(expectedValue, actualValue);
         }
 
-        [Test]
-        [Category("Dummy Tests")]
-        [Author("Radoslav Georgiev")]
-        [Description("A simple test that will fail.")]
-        public void FailingTest()
-        {
-            int expectedValue = 2;
+        //[Test]
+        //[Category("Dummy Tests")]
+        //[Author("Radoslav Georgiev")]
+        //[Description("A simple test that will fail.")]
+        //public void FailingTest()
+        //{
+        //    int expectedValue = 2;
 
-            int actualValue = 1 + 1 + 1;
+        //    int actualValue = 1 + 1 + 1;
 
-            Assert.AreEqual<int>(expectedValue, actualValue);
-        }
+        //    Assert.AreEqual<int>(expectedValue, actualValue);
+        //}
 
         [Test]
         [Category("Dummy Tests")]
