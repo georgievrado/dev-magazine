@@ -1374,6 +1374,7 @@
       <DependentUpon>DataConfig.config</DependentUpon>
       <IsTransformFile>True</IsTransformFile>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\Sitefinity\Configuration\DataConfig.Production.config">
       <DependentUpon>DataConfig.config</DependentUpon>
