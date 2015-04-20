@@ -1384,10 +1384,11 @@
     <Content Include="Properties\SlowCheetah\SlowCheetah.Transforms.targets" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Data\Sitefinity\Configuration\DataConfig.Integration.config">
+    <Content Include="App_Data\Sitefinity\Configuration\DataConfig.Integration.config">
       <DependentUpon>DataConfig.config</DependentUpon>
       <IsTransformFile>True</IsTransformFile>
-    </None>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="OpenAccessNuget.targets" />
