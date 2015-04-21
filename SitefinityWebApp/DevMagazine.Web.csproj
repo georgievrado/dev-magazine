@@ -1392,9 +1392,11 @@
   <ItemGroup>
     <None Include="web.UAT.config">
       <DependentUpon>web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="web.Production.config">
       <DependentUpon>web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
