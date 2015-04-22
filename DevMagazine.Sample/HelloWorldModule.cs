@@ -4,15 +4,20 @@ using DevMagazine.Sample.Web.Services.ViewModels;
 using DevMagazine.Sample.Web.UI.Frontend;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using Telerik.Sitefinity;
 using Telerik.Sitefinity.Abstractions;
 using Telerik.Sitefinity.Abstractions.VirtualPath.Configuration;
+using Telerik.Sitefinity.Fluent.Pages;
 using Telerik.Sitefinity.Modules;
 using Telerik.Sitefinity.Modules.Pages;
 using Telerik.Sitefinity.Modules.Pages.Configuration;
+using Telerik.Sitefinity.Pages.Model;
 using Telerik.Sitefinity.Scheduling;
 using Telerik.Sitefinity.Services;
 
@@ -78,6 +83,58 @@ namespace DevMagazine.Sample
             // A virtual path is required to access the embedded resources
             this.InstallVirtualPaths(initializer);
             this.InstallToolboxConfiguration(initializer);
+        }
+
+        public override void Upgrade(SiteInitializer initializer, Version upgradeFrom)
+        {
+            base.Upgrade(initializer, upgradeFrom);
+
+            if (upgradeFrom < new Version("1.0.0.1"))
+            {
+                UpgradeHelloWorldModule(initializer);
+            }
+        } 
+
+        private void UpgradeHelloWorldModule(SiteInitializer initializer)
+        {
+            var pageManager = initializer.PageManager;
+            var pageName = "Hello World";
+            Guid pageId = Guid.NewGuid();
+
+            var template = pageManager.GetTemplates().Where(t => t.Title == "Base").FirstOrDefault();
+
+            var pageNode = pageManager.CreatePage(PageLocation.Frontend, pageId, NodeType.Standard);
+            if (pageNode != null)
+            {
+                var pageData = pageNode.GetPageData();
+
+                pageData.Culture = Thread.CurrentThread.CurrentCulture.ToString();
+                pageData.HtmlTitle = pageName;
+                pageData.Template = template;
+
+                pageNode.Title = pageName;
+                pageNode.Name = pageName;
+                pageNode.Description = pageName;
+                pageNode.UrlName = Regex.Replace(pageName.ToLower(), @"[^\w\-\!\$\'\(\)\=\@\d_]+", "-");
+                pageNode.ShowInNavigation = true;
+                pageNode.DateCreated = DateTime.Now;
+                pageNode.LastModified = DateTime.Now;
+                pageNode.ApprovalWorkflowState = "Published";
+
+                pageManager.Provider.SuppressSecurityChecks = true;
+                var pageDataId = pageManager.GetPageNode(pageId).PageId;
+                var page = pageManager.EditPage(pageDataId, CultureInfo.CurrentUICulture);
+
+                var helloWorldWidget = new HelloWorldWidget();
+
+                var helloWorldWidgetControl = pageManager.CreateControl<PageDraftControl>(helloWorldWidget, "TA6C74962009_Col00");
+                helloWorldWidgetControl.Caption = "HelloWorldWidget";
+                pageManager.SetControlDefaultPermissions(helloWorldWidgetControl);
+                page.Controls.Add(helloWorldWidgetControl);
+
+                //publishes draft page
+                pageManager.PublishPageDraft(page, CultureInfo.CurrentUICulture);
+            }
         }
 
         public override void Uninstall(SiteInitializer initializer)
