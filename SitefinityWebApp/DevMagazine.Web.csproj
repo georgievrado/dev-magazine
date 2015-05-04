@@ -624,6 +624,13 @@
     <Compile Include="Mvc\ViewModels\AuthorViewModel.cs" />
     <Compile Include="Mvc\ViewModels\IssueViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SiteSyncSample.aspx.cs">
+      <DependentUpon>SiteSyncSample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteSyncSample.aspx.designer.cs">
+      <DependentUpon>SiteSyncSample.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="ajax-loader.gif" />
@@ -946,6 +953,7 @@
     <Content Include="Sitefinity\Services\Versioning\HistoryService.svc" />
     <Content Include="Sitefinity\Services\Workflow\WorkflowDefinitionService.svc" />
     <Content Include="Sitefinity\Services\Workflow\WorkflowService.svc" />
+    <Content Include="SiteSyncSample.aspx" />
     <Content Include="web.config">
       <SubType>Designer</SubType>
     </Content>
